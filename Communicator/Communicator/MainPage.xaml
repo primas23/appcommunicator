@@ -6,10 +6,27 @@
 
     <StackLayout>
         <!-- Place new controls here -->
-        <Label Text="Testssssss" />
-        <Label Text="Welcome to Xamarin.Forms!" 
+        <SearchBar
+            Placeholder=""
+            x:Name="Test_search"
+        />
+        <Button
+            Text="Search"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Clicked="Button_Clicked"
+        />
+        <Label
+            BindingContext="{x:Reference Test_search}"
+            x:Name="Test_Label"
+            Text="{Binding Text}"
+            HorizontalOptions="Center"
+        />
+        <Label
+           Text="Welcome to Xamarin.Forms!" 
            HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+           VerticalOptions="CenterAndExpand" 
+        />
     </StackLayout>
 
 </ContentPage>
